@@ -4,7 +4,7 @@ use clipboard_win::{Clipboard, formats, Setter};
 
 const CHARS: &str = "abcdefghijklmnopqrstuvwxyz";
 const NUMS: &str = "1234567890";
-const SIMPOLS: &str = ",.-?:_\"!'/()=%\\#&@{}[]";
+const SIMBOLS: &str = ",.-?:_\"!'/()=%\\#&@{}[]";
 
 
 
@@ -34,7 +34,7 @@ fn main() {
 
         }
         if option == "sim" {
-            password_list  += &SIMPOLS.to_string();
+            password_list  += &SIMBOLS.to_string();
         }
     }
 
