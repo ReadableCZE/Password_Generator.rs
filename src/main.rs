@@ -17,8 +17,6 @@ fn main() {
 
     let mut string: String = String::new();
 
-    // let mut _trash = std::io::stdout().flush();
-
     std::io::stdin().read_line(&mut string).expect("Error :(");
 
     let options: Vec<&str> = string.split_whitespace().collect();
