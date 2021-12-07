@@ -6,8 +6,6 @@ const CHARS: &str = "abcdefghijklmnopqrstuvwxyz";
 const NUMS: &str = "1234567890";
 const SIMBOLS: &str = ",.-?:_\"!'/()=%\\#&@{}[]";
 
-
-
 fn main() {
     println!("Welcome to password generator!");
     println!("This program will generate you random password with selected length and chars.");
@@ -17,7 +15,7 @@ fn main() {
 
     let mut string: String = String::new();
 
-    std::io::stdin().read_line(&mut string).expect("Error :(");
+    std::io::stdin().read_line(&mut string).unwrap();
 
     let options: Vec<&str> = string.split_whitespace().collect();
 
