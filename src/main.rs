@@ -6,6 +6,8 @@ const CHARS: &str = "abcdefghijklmnopqrstuvwxyz";
 const NUMS: &str = "1234567890";
 const SIMBOLS: &str = ",.-?:_\"!'/()=%\\#&@{}[]";
 
+
+
 fn main() {
     println!("Welcome to password generator!");
     println!("This program will generate you random password with selected length and chars.");
@@ -23,19 +25,13 @@ fn main() {
     password_list  += &CHARS.to_string();
 
     for option in options {
-        
-        if option == "rc" {
-            password_list += &CHARS.to_uppercase();
-        }
-        if option == "num" {
-            password_list  +=  &NUMS.to_string();
-
-        }
-        if option == "sim" {
-            password_list  += &SIMBOLS.to_string();
+        match option {
+            "rc" => password_list += &CHARS.to_uppercase(),
+            "num" => password_list  += &NUMS.to_string(),
+            "sim" => password_list  += &SIMBOLS.to_string(),
+            _ => ()
         }
     }
-
     println!("And length:");
     
     string.clear();
